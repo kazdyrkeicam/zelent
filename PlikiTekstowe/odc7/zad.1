@@ -1,0 +1,24 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+string name, surname;
+int phone;
+
+int main(){
+    cout << "imie: ";                       cin >> name;
+    cout << endl << "nazwisko: ";           cin >> surname;
+    cout << endl << "numer telefonu: ";     cin >> phone;
+    
+    fstream plik;
+    plik.open("plik", ios::out);
+    
+    plik << name << endl;
+    plik << surname << endl;
+    plik << phone << endl;
+    
+    plik.close();
+    
+    return 0;
+}
