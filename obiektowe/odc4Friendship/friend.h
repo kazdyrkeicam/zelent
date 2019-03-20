@@ -8,6 +8,8 @@ public:
   Punkt(string = "A", float = 0, float = 0);
   void load();
   
+  friend void sedzia(Punkt s, Prostokat p);
+  
 };
 
 class Prostokat{
@@ -17,5 +19,7 @@ class Prostokat{
 public:
     Prostokat(string = "brak", float = 0, float = 0, float = 1, float = 1);
     void load();
+  
+  friend void sedzia(Punkt s, Prostokat p);
     
 };
